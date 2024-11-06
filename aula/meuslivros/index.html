@@ -1,0 +1,13 @@
+<html>
+<body>
+    <h1>Coleções</h2>
+    {% for i in lista %}
+        {{i.nome}}  
+        <h3>Livros</h3>
+        {% for j in i.livro_set.all %}
+        {{j.nome}}<br>
+        {% endfor %}
+    {% endfor %}
+    </h1>
+</body>
+</html>
